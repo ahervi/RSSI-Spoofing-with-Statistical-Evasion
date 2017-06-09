@@ -1,4 +1,4 @@
-package com.hervieu.antoine.rssi;
+package com.hervieu.antoine.rssi3;
 
 import android.Manifest;
 import android.content.BroadcastReceiver;
