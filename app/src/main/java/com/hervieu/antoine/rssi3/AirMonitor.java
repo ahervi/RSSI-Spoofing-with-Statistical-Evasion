@@ -45,7 +45,8 @@ public class AirMonitor {
         public void onReceive(Context c, Intent intent) {
 
             if (intent.getAction().equals(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION)) {
-                activity.unregisterReceiver(mWifiScanReceiver); // Remove this line to keep scanning wifi
+                // Uncomment this line not to keep scanning wifi
+                activity.unregisterReceiver(mWifiScanReceiver);
 
                 List<ScanResult> mScanResults = mWifiManager.getScanResults();
                 String actualText = "";
@@ -75,7 +76,23 @@ public class AirMonitor {
                 for (ScanResult s : mScanResultsSorted) {
                     actualText += s.SSID + " " + s.BSSID + " " + s.level + "\n";
                 }
+                //TEST TODO ENLEVER
+
+                boolean found = false;
+                for (ScanResult s : mScanResultsSorted) {
+                   if (s.BSSID.equals("98:de:d0:08:bb:0e")){
+                       actualText = "" + s.level;
+                       found = true;
+
+                   }
+                }
+                if(!found) {
+                    actualText = "not found";
+                }
+                found = false;
+
                 mTextView.setText(mTextView.getText() + "\n" + actualText);
+
 
 
             }
