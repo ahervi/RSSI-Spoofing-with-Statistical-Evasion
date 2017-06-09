@@ -76,11 +76,12 @@ public class AirMonitor {
                 for (ScanResult s : mScanResultsSorted) {
                     actualText += s.SSID + " " + s.BSSID + " " + s.level + "\n";
                 }
-                //TEST TODO ENLEVER
+                //To select one mac adress
+                   /*                
 
                 boolean found = false;
                 for (ScanResult s : mScanResultsSorted) {
-                   if (s.BSSID.equals("98:de:d0:08:bb:0e")){
+                    if (s.BSSID.equals("98:de:d0:08:bb:0e")){
                        actualText = "" + s.level;
                        found = true;
 
@@ -90,7 +91,7 @@ public class AirMonitor {
                     actualText = "not found";
                 }
                 found = false;
-
+    */
                 mTextView.setText(mTextView.getText() + "\n" + actualText);
 
 
