@@ -1,6 +1,5 @@
 package com.hervieu.antoine.rssi3;
 
-
 import android.location.Location;
 
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -10,14 +9,10 @@ import com.google.android.gms.common.api.GoogleApiClient;
  */
 
 class GPSMonitor {
-    private GoogleApiClient mGoogleApiClient;
-    private MainActivity activity;
-    private Location mLastLocation;
+
     public static double LAT;
     public static double LON;
-    public GPSMonitor(MainActivity activity) {
-        this.activity = activity;
-    }
+
 
 
 }
