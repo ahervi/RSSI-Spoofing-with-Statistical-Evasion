@@ -8,9 +8,7 @@ import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
-import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
